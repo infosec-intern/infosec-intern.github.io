@@ -20,6 +20,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+a#totes-ethical {
+    font-size: 0.5em;
+}
 h1 {
     font-size: 3em;
 }
