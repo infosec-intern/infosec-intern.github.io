@@ -2,7 +2,7 @@ body {
     margin: 60px auto;
     width: 70%;
     font-family: 'Inconsolata', monospace;
-    background-color: #002699;
+    background-color: #002080;
     color: #ffffe6;
 }
 nav ul, footer ul {
@@ -31,7 +31,6 @@ h1 {
 p {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
 }
 footer {
     border-top: 1px solid #d5d5d5;
