@@ -18,6 +18,12 @@ a {
 }
 a:hover {
     text-decoration: underline;
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 h1 {
     font-size: 3em;
