@@ -13,5 +13,4 @@ a tool I've found myself needing in the past, but couldn't find any equivalents 
 
 This script is just one of many I'm working on under the _Posh-Utilities_ repository. I also have a wrapper around some native zip/unzip functions built into C#, and plans to introduce a Windows Management, or WSMan, command-extraction script. I'll elaborate more on these in the future though
 
----
-If you're wondering why this post is dated before my first post on July 2nd, it's because I announced the script before beginning my work on this blog
+###### If you're wondering why this post is dated before my first post on July 2nd, it's because I announced the script before beginning my work on this blog
