@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Project: GitHub Pages Blog"
+title: GitHub Pages Blog
 date: 2017-07-04
 tags: project github blog flask jinja
 ---
