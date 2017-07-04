@@ -4,7 +4,7 @@ title: "Project: GitHub Pages Blog"
 date: 2017-07-04
 tags: project github blog flask jinja
 ---
-# This Blog!
+## This Blog!
 As you can see, it's still very much under construction, but this blog is one of my primary projects right now.
 I've never worked with Jekyll before, but have a bit of experience using Flask + Jinja2 templates, so Jekyll's Liquid tags system is mostly familiar. Plus, having some Git experience (read as: I know the main 4 git commands) is a boon.
 
