@@ -1,7 +1,8 @@
 ---
-layout: project
-title: "GitHub Pages Blog"
+layout: post
+title: "Project: GitHub Pages Blog"
 date: 2017-07-04
+tags: project github blog flask jinja
 ---
 # This Blog!
 As you can see, it's still very much under construction, but this blog is one of my primary projects right now.
