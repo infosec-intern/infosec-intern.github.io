@@ -19,12 +19,12 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    animation: blink-animation 4s steps(5, start) infinite;
+    animation: cursor-blink 4s infinite;
 }
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
+@keyframes cursor-blink {
+  0% { opacity:0 }
+  50% { opacity: 1}
+  100% { opacity: 0}
 }
 h1 {
     font-size: 3em;
