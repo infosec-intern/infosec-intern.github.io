@@ -4,9 +4,8 @@ title: YARA Extension for VSCode
 date: 2017-07-04
 tags: yara vscode project
 ---
-### [YARA Extension for VSCode](https://marketplace.visualstudio.com/items?itemName=infosec-intern.yara)
 
-About a year ago I started a project to provide syntax highlighting and snippets support for YARA on Visual Studio Code. The project went pretty well; Microsoft makes it easy to extend VSCode even without digging into the APIs too much.
+About a year ago I started a project to provide syntax highlighting and snippets support for [YARA on Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=infosec-intern.yara). The project went pretty well; Microsoft makes it easy to extend VSCode even without digging into the APIs too much.
 
 ![Syntax Highlights]({{ site.url }}/images/yara-ext-04092016.PNG)
 
