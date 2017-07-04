@@ -1,7 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Inconsolata', monospace;
 }
 nav ul, footer ul {
     padding: 0px;
