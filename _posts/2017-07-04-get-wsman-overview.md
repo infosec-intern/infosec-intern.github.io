@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get-WSManCommands Beta Release
+title: Get-WSManCommands
 date: 2017-07-04
 tags: powershell project wsman
 ---
