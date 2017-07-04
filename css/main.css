@@ -19,12 +19,6 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    animation: cursor-blink 4s infinite;
-}
-@keyframes cursor-blink {
-  0% { opacity:0 }
-  50% { opacity: 1}
-  100% { opacity: 0}
 }
 h1 {
     font-size: 3em;
