@@ -3,8 +3,30 @@ layout: default
 title: Infosec Intern's Blog
 ---
 <h1>Bloggy Blog</h1>
-<ul class="posts">
+<table class="posts">
+    <tr>
+        <th>Title</th>
+        <th>CreatedTime</th>
+        <th>LastModifiedTime</th>
+    </tr>
+    {% for post in site.posts %}
+    <tr>
+        <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
+    </tr>
+    <tr>
+        <td>{{ post.date | date_to_string }}</td>
+    </tr>
+    <tr>
+        {% if post.modified %}
+        <td>{{ post.modified | date_to_string }}</td>
+        {% else %}
+        <td>{{ post.date | date_to_string }}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+<!--<ul class="posts">
     {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     {% endfor %}
-</ul>
+</ul>-->

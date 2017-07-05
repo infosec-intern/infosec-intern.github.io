@@ -1,7 +1,8 @@
 ---
 layout: post
 title: YARA Extension for VSCode
-date: 2017-07-04
+date: 2016-06-29
+modified: 2017-07-04
 tags: yara vscode project
 ---
 

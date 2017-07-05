@@ -2,6 +2,7 @@
 layout: post
 title: Get-ScriptBlock Beta Release
 date: 2017-06-30
+modified: 2017-07-04
 tags: powershell project
 ---
 
