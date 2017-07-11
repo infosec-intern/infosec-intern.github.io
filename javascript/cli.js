@@ -1,0 +1,3 @@
+/*
+    This script contains functions for emulating terminal behavior on this website
+*/
