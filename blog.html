@@ -3,8 +3,8 @@ layout: default
 title: Infosec Intern's Blog
 ---
 <style>
-    table#posts {
-        padding: 0.5em;
+    #posts tbody th, td {
+        padding: 0.5em 0.2em;
     }
 </style>
 <!--<h1>Bloggy Blog</h1>
@@ -14,21 +14,23 @@ title: Infosec Intern's Blog
     {% endfor %}
 </ul>-->
 <h1>ls .\posts</h1>
-<table class="posts">
-    <tr>
-        <th>Title</th>
-        <th>CreatedTime</th>
-        <th>LastModifiedTime</th>
-    </tr>
-    {% for post in site.posts %}
-    <tr>
-        <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
-        <td>{{ post.date | date_to_string }}</td>
-        {% if post.modified %}
-        <td>{{ post.modified | date_to_string }}</td>
-        {% else %}
-        <td>{{ post.date | date_to_string }}</td>
-        {% endif %}
-    </tr>
-    {% endfor %}
+<table id="posts">
+    <tbody>
+        <tr>
+            <th>Title</th>
+            <th>CreatedTime</th>
+            <th>LastModifiedTime</th>
+        </tr>
+        {% for post in site.posts %}
+        <tr>
+            <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
+            <td>{{ post.date | date_to_string }}</td>
+            {% if post.modified %}
+            <td>{{ post.modified | date_to_string }}</td>
+            {% else %}
+            <td>{{ post.date | date_to_string }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
