@@ -2,8 +2,26 @@
 layout: default
 title: Infosec Intern's Blog
 ---
-<h1>Bloggy Blog</h1>
-<!--<table class="posts">
+<style>
+    table#posts {
+        padding: 0.5em;
+        border: 1px solid black;
+    }
+    tr {
+        border: 1px solid red;
+    }
+    td {
+        border: 1px solid blue;
+    }
+</style>
+<!--<h1>Bloggy Blog</h1>
+<ul class="posts">
+    {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>-->
+<h1>ls .\posts</h1>
+<table class="posts">
     <tr>
         <th>Title</th>
         <th>CreatedTime</th>
@@ -24,9 +42,4 @@ title: Infosec Intern's Blog
         {% endif %}
     </tr>
     {% endfor %}
-</table>-->
-<ul class="posts">
-    {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+</table>
