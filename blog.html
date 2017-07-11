@@ -30,11 +30,7 @@ title: Infosec Intern's Blog
     {% for post in site.posts %}
     <tr>
         <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
-    </tr>
-    <tr>
         <td>{{ post.date | date_to_string }}</td>
-    </tr>
-    <tr>
         {% if post.modified %}
         <td>{{ post.modified | date_to_string }}</td>
         {% else %}
