@@ -15,12 +15,14 @@ title: Infosec Intern's Blog
 </style>
 <h1>ls .\posts</h1>
 <table id="posts">
-    <tbody>
+    <thead>
         <tr>
             <th>Title</th>
             <th>CreatedTime</th>
             <th>LastModifiedTime</th>
         </tr>
+    </thead>
+    <tbody>
         {% for post in site.posts %}
         <tr>
             <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
