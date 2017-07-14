@@ -13,7 +13,9 @@ function showManual(command) {
     // mimic the 'man' command
 }
 
-document.onkeyup = function(evt) {
-    var eventObj = window.event? event : evt
-    console.log(JSON.stringify(eventObj))
+// https://stackoverflow.com/questions/16006583/capturing-ctrlz-key-combination-in-javascript
+document.onkeyup = function(e) {
+    // ensure event is not null
+    e = e || window.event
+    console.log(JSON.stringify(e))
 }
