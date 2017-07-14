@@ -14,7 +14,7 @@ function showManual(command) {
 }
 
 // https://stackoverflow.com/questions/16006583/capturing-ctrlz-key-combination-in-javascript
-document.onkeyup = function(e) {
+document.onkeypress = function(e) {
     // ensure event is not null
     e = e || window.event
     console.log(JSON.stringify(e))
