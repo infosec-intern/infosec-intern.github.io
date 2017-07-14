@@ -18,4 +18,5 @@ document.onkeypress = function(e) {
     // ensure event is not null
     e = e || window.event
     console.log(JSON.stringify(e))
+    console.log(e.which)
 }
