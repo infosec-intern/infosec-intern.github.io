@@ -20,3 +20,5 @@ After a little more research, I found some StackOverflow articles about a module
 There's no file saved to disk or data sent through a network interface, so I had trouble getting the PCAP data into pyshark to even attempt to parse it. Again, back to the drawing board.
 
 Finally, after even more research - \*ahem\* Stack Overflow articles - I came upon [dpkt](https://dpkt.readthedocs.org/). I had never heard of this module before, and it appears to have a relatively small following. In fact, I've had to rely entirely on [articles](https://jon.oberheide.org/blog/2008/10/15/dpkt-tutorial-2-parsing-a-pcap-file/) written 9 years ago by Jon Oberheide and the source code hosted on GitHub
+
+--- work in progress ---
