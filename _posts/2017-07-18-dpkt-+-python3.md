@@ -40,7 +40,7 @@ There was even a new PR created the day I started this blog post! Clearly there'
 
 Time to get programming! I still have to solve the problem of converting my base64-encoded PCAP to a usable format for dpkt. Thankfully, python3 makes that easy too.
 The `io` module contains a couple classes - StringIO and BytesIO - that essentially act like files that are entirely in memory. Since PCAP files contain raw bytes, BytesIO is the obvious option.
-A few lines of code should will meet our requirements here:
+A few lines of code will meet our requirements here:
 ```python
 import base64
 import io
