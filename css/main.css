@@ -28,6 +28,12 @@ a#totes-ethical {
 h1 {
     font-size: 3em;
 }
+code {
+    font-size: 15pt;
+    color: #f0f0f5;
+    border-color: #b3b3cc;
+    background-color: #52527a;
+}
 p {
     font-size: 1.5em;
     line-height: 1.4em;
