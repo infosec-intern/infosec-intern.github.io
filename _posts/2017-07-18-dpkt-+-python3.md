@@ -49,3 +49,5 @@ with open(raw_data, "r") as ifile:
     pcap = dpkt.pcap.Reader(ifile)
 ```
 And boom! We can start reading from the PCAP file just as if it was written to disk.
+
+--- work in progress ---
