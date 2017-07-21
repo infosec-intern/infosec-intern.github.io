@@ -31,8 +31,10 @@ h1 {
 .language-python {
     font-size: 15pt;
     color: #f0f0f5;
-    border-color: #b3b3cc;
-    background-color: #52527a;
+    border: .4em solid #b3b3cc;
+    background: #52527a;
+    padding: 1%;
+    border-top-width: 1.5em;
 }
 p {
     font-size: 1.5em;
