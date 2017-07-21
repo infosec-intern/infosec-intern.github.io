@@ -12,6 +12,7 @@ A few lines of code will meet our requirements here:
 ~~~ python
 import base64
 import io
+
 raw_data = io.BytesIO(base64.b64decode(data))
 with open(raw_data, "r") as ifile:
     pcap = dpkt.pcap.Reader(ifile)
