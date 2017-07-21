@@ -1,0 +1,35 @@
+span.c {
+    /* comments */
+    color: #2d862d
+}
+span.k {
+    /* import, with, as, for, if statements */
+    color:  #990099;
+}
+span.n {
+    /* modules, variables */
+    /* color: #fff; */
+}
+span.o {
+    color: #fff;
+}
+span.p {
+    color: #fff;
+}
+span.kn {
+    color: #fff;
+}
+span.mi {
+    color: #fff;
+}
+span.nb {
+    /* stdlib functions */
+    color: #ffffcc;
+}
+span.nn {
+    color: #fff;
+}
+span.ow {
+    /* in statement */
+    color: #002db3;
+}

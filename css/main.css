@@ -35,7 +35,7 @@ h1 {
     border: 1px solid #000000;
     border-radius: .3em;
 }
-pre {
+pre.highlight {
     border: .4em solid #b3b3cc;
     margin: 0;
     padding: 1%;
