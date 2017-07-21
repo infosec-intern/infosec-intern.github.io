@@ -35,6 +35,7 @@ h1 {
     background: #52527a;
     padding: 1%;
     border-top-width: 1.5em;
+    border-radius: .3em;
 }
 p {
     font-size: 1.5em;
