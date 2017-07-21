@@ -1,10 +1,12 @@
 ---
 layout: post
-title: dpkt + python3 = <3
+title: dpkt + python3 = <3 (Part One)
 date: 2017-07-18
 modified: 2017-07-20
 tags: python dpkt misp
 ---
+## Setup Day
+### (a.k.a. "You mean WireShark isn't the only program for reading PCAPs?")
 Lately I've been working on a [MISP module](https://github.com/MISP/misp-modules) for importing indicators from PCAP files. There's already a similar tool under the [MISP sightings tools](https://github.com/MISP/misp-sighting-tools),
 but it requires command-line use and, in my opinion, there should be some kind of integration with the UI for analysts with less command-line experience.
 
@@ -38,16 +40,4 @@ In fact, I've had to rely entirely on [articles](https://jon.oberheide.org/blog/
 I know this doesn't sound like a perfect scenario, but the module is kept fairly up-to-date. There has been a steady stream of commits to GitHub over the last year, and the pip package appears to be updated to a fairly recent version of the code.
 There was even a new PR created the day I started this blog post! Clearly there's interest in the package.
 
-Time to get programming! I still have to solve the problem of converting my base64-encoded PCAP to a usable format for dpkt. Thankfully, python3 makes that easy too.
-The `io` module contains a couple classes - StringIO and BytesIO - that essentially act like files that are entirely in memory. Since PCAP files contain raw bytes, BytesIO is the obvious option.
-A few lines of code will meet our requirements here:
-```python
-import base64
-import io
-raw_data = io.BytesIO(base64.b64decode(data))
-with open(raw_data, "r") as ifile:
-    pcap = dpkt.pcap.Reader(ifile)
-```
-And boom! We can start reading from the PCAP file just as if it was written to disk.
-
---- work in progress ---
+Alright, now we've found our perfect module! Part one is done; check out part two for more about some of the tips I learned programming the PCAP module!
