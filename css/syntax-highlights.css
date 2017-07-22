@@ -20,7 +20,7 @@ span.kn {
     /* import statements */
     color: #b48ead;
 }
-span .mi,.s,.si {
+span.mi, span.s, span.si {
     color: #ebcb8b;
 }
 span.nb {
