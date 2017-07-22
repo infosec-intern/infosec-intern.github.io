@@ -8,7 +8,7 @@ span.k {
 }
 span.n {
     /* modules, variables */
-    /* color: #fff; */
+     color: #fff;
 }
 span.o {
     color: #fff;
@@ -20,7 +20,7 @@ span.kn {
     /* import statements */
     color: #b48ead;
 }
-span.mi {
+span .mi,.s,.si {
     color: #ebcb8b;
 }
 span.nb {
