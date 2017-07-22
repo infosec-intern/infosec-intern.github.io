@@ -65,3 +65,5 @@ for address in addresses:
         if ip in network:
             print("%s is whitelisted" % ip)
 ```
+
+And that's it for now! I'll wrap up the next part with a more MISP-focused entry.
