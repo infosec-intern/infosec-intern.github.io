@@ -65,15 +65,3 @@ for address in addresses:
         if ip in network:
             print("%s is whitelisted" % ip)
 ```
-
-Now that we can extract data with `dpkt` and filter IP data out, we can begin importing these attributes into MISP. At the end of your handler function, you'll just return a JSON document with all of your attributes and the categories and types they fall under:
-``` python
-r = {'results':[{'categories':[],'types':[],'values':[]}]}
-return r
-```
-
-The end result, after parsing HTTP request headers and DNS A, AAAA, and PTR queries/answers, netted me this:
-
-![PCAP Import]({{ site.url }}/images/pcap_import.PNG)
-
-If you want to write your own module, the [misp-module slides](https://circl.lu/assets/files/misp-training/luxembourg2017/4-misp-modules.pdf) given by Circl.lu are the best place to start.
