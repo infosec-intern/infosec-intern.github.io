@@ -6,7 +6,21 @@ tags: python dpkt misp
 ---
 ## Integrating with MISP
 Now that we can extract data with `dpkt` and filter IP data out, we can begin importing these attributes into MISP.
-We can use the UDP and TCP, HTTP, and DNS modules in `dpkt` to delve further into the packet data. These modules will include information like source and destination port numbers, HTTP method, URI, and nameservers.
+We can use the UDP and TCP, HTTP, and DNS modules in `dpkt` to delve further into the packet data. These modules will include information like source and destination port numbers, HTTP method, URI, and nameservers. For `dpkt`, the pattern of accessing this data is:
+
+``` python
+import dpkt
+
+if isinstance(curr_layer, next_layer):
+    <layer> = curr_layer.data
+```
+
+This applies where `layer` is each level of the OSI model starting at Ethernet.
+A typical HTTP packet, for example:
+
+```
+Ethernet -> IP -> TCP -> HTTP
+```
 
 At the end of your handler function, you'll just return a JSON document with all of your attributes and the categories and types they fall under:
 ``` python
