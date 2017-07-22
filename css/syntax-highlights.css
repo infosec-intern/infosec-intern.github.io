@@ -1,4 +1,7 @@
-.language-python {
+code.highlighter-rouge {
+    font-weight: lighter;
+}
+code.language-python {
     font-size: 15pt;
     color: #f0f0f5;
     background: #52527a;
