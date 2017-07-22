@@ -1,10 +1,10 @@
 span.c {
     /* comments */
-    color: #2d862d
+    color: #89a1c1;
 }
 span.k {
-    /* import, with, as, for, if statements */
-    color:  #990099;
+    /*  with, as, for, if statements */
+    color:  #b48ead;
 }
 span.n {
     /* modules, variables */
@@ -17,19 +17,20 @@ span.p {
     color: #fff;
 }
 span.kn {
-    color: #fff;
+    /* import statements */
+    color: #b48ead;
 }
 span.mi {
-    color: #fff;
+    color: #ebcb8b;
 }
 span.nb {
     /* stdlib functions */
-    color: #ffffcc;
+    color: #bbcb8b;
 }
 span.nn {
     color: #fff;
 }
 span.ow {
     /* in statement */
-    color: #002db3;
+    color: #b48ead;
 }
