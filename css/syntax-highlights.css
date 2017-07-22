@@ -1,3 +1,16 @@
+.language-python {
+    font-size: 15pt;
+    color: #f0f0f5;
+    background: #52527a;
+    border: 1px solid #000000;
+    border-radius: .3em;
+}
+pre.highlight {
+    border: .4em solid #b3b3cc;
+    margin: 0;
+    padding: 2% 1%;
+    border-top-width: 1.5em;
+}
 span.c {
     /* comments */
     color: #89a1c1;
