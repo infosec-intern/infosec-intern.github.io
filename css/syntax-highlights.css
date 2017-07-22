@@ -37,6 +37,7 @@ span.kn {
     color: #b48ead;
 }
 span.mi, span.s, span.si {
+    /* strings and integers */
     color: #ebcb8b;
 }
 span.nb {
