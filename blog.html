@@ -27,7 +27,7 @@ title: Infosec Intern's Blog
     <tbody>
         {% for post in site.posts %}
         <tr>
-            <td>-r----</td>
+            <td>--r----</td>
             <td>{{ post.date | date_to_string }}</td>
             {% if post.modified %}
             <td>{{ post.modified | date_to_string }}</td>
