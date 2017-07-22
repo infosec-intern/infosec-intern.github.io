@@ -6,7 +6,7 @@ modified: 2017-07-22
 tags: python dpkt misp
 ---
 ## Time to get programming!
-I still have to solve the problem of converting my base64-encoded PCAP to a usable format for dpkt. Thankfully, python3 makes that easy too.
+I still have to solve the problem of converting my base64-encoded PCAP to a usable format for `dpkt`. Thankfully, python3 makes that easy too.
 The `io` module contains a couple classes - StringIO and BytesIO - that essentially act like files that are entirely in memory. Since PCAP files contain raw bytes, BytesIO is the obvious option.
 A few lines of code will meet our requirements here:
 
@@ -21,10 +21,10 @@ with open(raw_data, "r") as ifile:
 ```
 
 And boom! We can start reading from the PCAP file just as if it was written to disk. While writing this blog post, I realized I probably could've done the same thing to get the pyshark module working, but I'll just let that be a lesson for another time.
-Plus, I've enjoyed learning about and using dpkt, and I think after some more practice, I could find some ways to contribute back to the project.
+Plus, I've enjoyed learning about and using `dpkt`, and I think after some more practice, I could find some ways to contribute back to the project.
 
 Next challenge: start parsing the PCAP for interesting data. If you're familiar with networking, you'll know it's not as simple as just picking the HTTP packets out; there are many layers inside each packet that need to be parsed before we can determine if a packet is even used for HTTP or not.
-IP addresses, for example, can be extracted from a packet with or without an HTTP header. The dpkt module makes it simple to pull out IP data, and python3's `ipaddress` module makes working with IPs a breeze - I barely need to know subnet masks or IP versions to make a good parser.
+IP addresses, for example, can be extracted from a packet with or without an HTTP header. The `dpkt` module makes it simple to pull out IP data, and python3's `ipaddress` module makes working with IPs a breeze - I barely need to know subnet masks or IP versions to make a good parser.
 
 ``` python
 import ipaddress
@@ -66,4 +66,14 @@ for address in addresses:
             print("%s is whitelisted" % ip)
 ```
 
---- work in progress ---
+Now that we can extract data with `dpkt` and filter IP data out, we can begin importing these attributes into MISP. At the end of your handler function, you'll just return a JSON document with all of your attributes and the categories and types they fall under:
+``` python
+r = {'results':[{'categories':[],'types':[],'values':[]}]}
+return r
+```
+
+The end result, after parsing HTTP request headers and DNS A, AAAA, and PTR queries/answers, netted me this:
+
+![PCAP Import]({{ site.url }}/images/pcap_import.PNG)
+
+If you want to write your own module, the [misp-module slides](https://circl.lu/assets/files/misp-training/luxembourg2017/4-misp-modules.pdf) given by Circl.lu are the best place to start.
