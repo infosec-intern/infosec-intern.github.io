@@ -1,5 +1,10 @@
-code.highlighter-rouge {
+.highlighter-rouge {
     font-weight: lighter;
+    background-color: #dcdcdc;
+    color: #f0f0f5;
+}
+pre.highlight {
+    background-color: #ebcb8b;
 }
 .language-python {
     font-size: 15pt;
@@ -8,7 +13,7 @@ code.highlighter-rouge {
     border: 1px solid #000000;
     border-radius: .3em;
 }
-pre.highlight {
+.language-python pre.highlight {
     border: .4em solid #b3b3cc;
     margin: 0;
     padding: 2% 1%;
