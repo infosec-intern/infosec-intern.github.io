@@ -3,6 +3,9 @@ div.highlighter-rouge {
     background-color: #dcdcdc;
     color: #f0f0f5;
 }
+pre.highlight {
+    border-color: .4em solid #52527a;
+}
 div.language-python {
     font-size: 15pt;
     color: #f0f0f5;
@@ -15,9 +18,6 @@ div.language-python pre.highlight {
     margin: 0;
     padding: 2% 1%;
     border-top-width: 1.5em;
-}
-pre.highlight {
-    background-color: #ebcb8b;
 }
 span.c {
     /* comments */
