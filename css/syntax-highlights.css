@@ -1,16 +1,16 @@
-.highlighter-rouge {
+div.highlighter-rouge {
     font-weight: lighter;
     background-color: #dcdcdc;
     color: #f0f0f5;
 }
-.language-python {
+div.language-python {
     font-size: 15pt;
     color: #f0f0f5;
     background: #52527a;
     border: 1px solid #000000;
     border-radius: .3em;
 }
-.language-python pre.highlight {
+div.language-python pre.highlight {
     border: .4em solid #b3b3cc;
     margin: 0;
     padding: 2% 1%;
