@@ -3,9 +3,6 @@
     background-color: #dcdcdc;
     color: #f0f0f5;
 }
-pre.highlight {
-    background-color: #ebcb8b;
-}
 .language-python {
     font-size: 15pt;
     color: #f0f0f5;
@@ -18,6 +15,9 @@ pre.highlight {
     margin: 0;
     padding: 2% 1%;
     border-top-width: 1.5em;
+}
+pre.highlight {
+    background-color: #ebcb8b;
 }
 span.c {
     /* comments */
