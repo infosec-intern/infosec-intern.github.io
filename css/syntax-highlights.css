@@ -1,11 +1,13 @@
 div.highlighter-rouge {
     font-weight: lighter;
+}
+/*
     background-color: #dcdcdc;
     color: #f0f0f5;
 }
 pre.highlight {
     border-color: .4em solid #52527a;
-}
+} */
 div.language-python {
     font-size: 15pt;
     color: #f0f0f5;
