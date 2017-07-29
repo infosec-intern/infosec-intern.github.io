@@ -4,6 +4,9 @@ section {
 h1 {
     font-size: 2em;
 }
+section#work-experience table {
+    padding: .3em;
+}
 section#work-experience table p.description {
     font-size: 1em;
 }
