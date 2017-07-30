@@ -10,3 +10,6 @@ section#work-experience table {
 section#work-experience table p.description {
     font-size: 1em;
 }
+section#work-experience table .date {
+    padding-right: .8em;
+}
