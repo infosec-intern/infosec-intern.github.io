@@ -12,4 +12,5 @@ section#work-experience table p.description {
 }
 section#work-experience table .date {
     padding-right: .8em;
+    background-color: #d5d5d5;
 }
