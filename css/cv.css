@@ -7,6 +7,9 @@ h1 {
 section#work-experience table {
     padding: .3em;
 }
+section#work-experience table thead tr {
+    background-color: #d5d5d5;
+}
 section#work-experience table p.description {
     font-size: 1em;
 }
