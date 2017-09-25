@@ -26,3 +26,21 @@ The only thing stringing all these logs together is a job ID, and since it's a l
 * Resulting Filesize
 * Bytes Transferred
 * Job Status Code
+
+You can find the script [on my GitHub profile](https://github.com/infosec-intern/Posh-Utilities/blob/master/Get-BITSHistory.ps1). As always, give it a shot and don't hesitate to submit issues or pull requests!
+
+And a quick example, straight from the PowerShell Get-Help menu:
+```
+ Get-BITSHistory | Select-Object -First 1
+    Id              : {2ABEF5DC-81A6-49F0-B314-D324D31A75D1}
+    Name            : Push Notification Platform Job: 1
+    Owner           : computer\Username
+    ProcessPath     : C:\Windows\System32\svchost.exe
+    StartTime       : 9/16/2017 4:25:47 PM
+    ProcessId       : 1964
+    URL             : http://img-s-msn-com.akamaized.net/tenant/amp/entityid/AArXcnF.img?w=204&h=100&m=6&tilesize=wide&x=620&y=148&ms-scale=150&ms-contrast=standard
+    BytesTotal      : 15552
+    StatusCode      : 0
+    ByteTransferred : 15552
+    EndTime         : 9/16/2017 4:25:47 PM
+```
