@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Get-BITSHistory Release
-date: 2017-06-30
-modified: 2017-07-04
+date: 2017-09-24
+modified: 2017-09-24
 tags: powershell project
 ---
 
