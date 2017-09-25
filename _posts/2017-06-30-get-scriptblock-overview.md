@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Get-ScriptBlock Release
-date: 2017-06-30
-modified: 2017-09-24
+date: 2017-09-24
+created: 2017-06-30
 tags: powershell project
 ---
 

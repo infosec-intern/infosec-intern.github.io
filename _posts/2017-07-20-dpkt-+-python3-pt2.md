@@ -1,8 +1,8 @@
 ---
 layout: post
 title: dpkt + python3 = <3 (Part Two)
-date: 2017-07-20
-modified: 2017-07-22
+date: 2017-07-22
+created: 2017-07-20
 tags: python dpkt misp
 ---
 ## Time to get programming!

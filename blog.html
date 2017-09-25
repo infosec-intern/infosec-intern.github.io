@@ -28,12 +28,12 @@ title: Infosec Intern's Blog
         {% for post in site.posts %}
         <tr>
             <td>--r----</td>
-            <td>{{ post.date | date_to_string }}</td>
-            {% if post.modified %}
-            <td>{{ post.modified | date_to_string }}</td>
+            {% if post.created %}
+            <td>{{ post.created | date_to_string }}</td>
             {% else %}
             <td>{{ post.date | date_to_string }}</td>
             {% endif %}
+            <td>{{ post.date | date_to_string }}</td>
             <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
         </tr>
         {% endfor %}

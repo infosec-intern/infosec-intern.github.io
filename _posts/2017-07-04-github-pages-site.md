@@ -2,7 +2,6 @@
 layout: post
 title: GitHub Pages Blog
 date: 2017-07-04
-modified: 2017-07-04
 tags: project github blog flask jinja
 ---
 As you can see, it's still very much under construction, but this blog is one of my primary projects right now.
