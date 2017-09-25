@@ -6,7 +6,7 @@ created: 2017-09-24
 tags: powershell project
 ---
 
-After being inspired by all the great [DerbyCon 7 talks](http://www.irongeek.com/i.php?page=derbyconstreams), I decided to revisit my _Posh-Utilities_ repository. One of my initial ideas was compiling the various (up to 4) BITS event logs into a single, easily-parsable object.
+After being inspired by all the great [DerbyCon 7 talks](http://www.irongeek.com/i.php?page=derbyconstreams), I decided to revisit my _Posh-Utilities_ repository. One of my initial ideas was compiling the various BITS event logs into a single, easily-parsable object. One BITS job can have up to 4 event logs associated with it due to this duplication.
 Currently, the BITS logs split apart the job statuses and the files downloaded by the jobs.
 
 Job Info (Event ID):
