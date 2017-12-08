@@ -17,7 +17,9 @@ I started experimenting with the Shodan API with a [new GitHub repository](https
 Tenable recently published an article on identifying PowerShell Empire HTTP listener servers on the open Internet. It's located on their site at https://www.tenable.com/blog/identifying-empire-http-listeners. The author did a great job of explaining each step of his query and how it relates to the Empire codebase, and the Shodan Python module is so straightforward that it was easy to translate the script.
 It mostly boiled down to two types of queries - facets and searches.
 ```python
-query = 'title:"404 Not Found" + "Content-Length: 233"  + "Cache-Control: no-cache, no-store, must-revalidate" -"post-check=" -"pre-check=" -"private" + "Pragma: no-cache" + "Expires: 0" + "Server:" -"X-" -"Set-Cookie:" -"Connection:" -"Etag" -"Last-Modified" -"Accept-Ranges:" -"Access-Control"'
+query = 'title:"404 Not Found" + "Content-Length: 233" + "Cache-Control: no-cache, no-store, must-revalidate"' + \
+'-"post-check=" -"pre-check=" -"private" + "Pragma: no-cache" + "Expires: 0" + "Server:" -"X-" -"Set-Cookie:"' + \
+'-"Connection:" -"Etag" -"Last-Modified" -"Accept-Ranges:" -"Access-Control"'
 facets = {
     "org": "Top 5 Organizations",
     "domain": "Top 5 Domains",
