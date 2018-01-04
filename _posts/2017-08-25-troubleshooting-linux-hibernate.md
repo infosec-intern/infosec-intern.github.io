@@ -20,4 +20,12 @@ The only reason I know this is a suspend problem (and may or may not be a hibern
 journalctl -b -1
 ```
 
---- TBD ---
+**Update 2018-01-01**
+I'm rebuilding my Arch Linux system due to a combination of prior negligence, instability, a new(ish) GPU, and just wanting to start off the new year with a clean slate
+...Anyway...
+While setting the EFI entries and perusing the [Power management page on the Arch Wiki](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate), I noticed a throwaway phrase that might shed light on this problem and allow me to avoid it with this new setup.
+
+ > There are...some high level interfaces providing tweaks to handle 
+ > problematic hardware drivers/kernel modules (e.g. video card re-initialization).
+ 
+ I'll post updates on my progress. I promise this time.
