@@ -25,7 +25,13 @@ I'm rebuilding my Arch Linux system due to a combination of prior negligence, in
 ...Anyway...
 While setting the EFI entries and perusing the [Power management page on the Arch Wiki](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate), I noticed a throwaway phrase that might shed light on this problem and allow me to avoid it with this new setup.
 
- > There are...some high level interfaces providing tweaks to handle 
+ > There are...some high level interfaces providing tweaks to handle
  > problematic hardware drivers/kernel modules (e.g. video card re-initialization).
- 
+
  I'll post updates on my progress. I promise this time.
+
+**Update 2018-01-04**
+It worked! I just tested both `systemctl hibernate` and `systemctl suspend` and they worked flawlessly.
+I was even able to notice when the [resume] hook was triggered after I woke the machine up from hibernate.
+
+And to think all it took was wiping my OS and completely rebuilding from scratch!
