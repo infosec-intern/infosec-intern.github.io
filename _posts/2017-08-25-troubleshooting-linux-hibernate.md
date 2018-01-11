@@ -2,7 +2,7 @@
 layout: post
 title: Troubleshooting a Linux Hibernate/Suspend Issue
 date: 2017-08-25
-tags: linux suspend troubleshooting
+tags: linux troubleshooting
 ---
 I love Linux, but it has never been good at a few things:
 
@@ -20,7 +20,7 @@ The only reason I know this is a suspend problem (and may or may not be a hibern
 journalctl -b -1
 ```
 
-**Update 2018-01-01**
+#### Update 2018-01-01**
 I'm rebuilding my Arch Linux system due to a combination of prior negligence, instability, a new(ish) GPU, and just wanting to start off the new year with a clean slate
 ...Anyway...
 While setting the EFI entries and perusing the [Power management page on the Arch Wiki](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate), I noticed a throwaway phrase that might shed light on this problem and allow me to avoid it with this new setup.
@@ -30,7 +30,7 @@ While setting the EFI entries and perusing the [Power management page on the Arc
 
  I'll post updates on my progress. I promise this time.
 
-**Update 2018-01-04**
+#### Update 2018-01-04**
 It worked! I just tested both `systemctl hibernate` and `systemctl suspend` and they worked flawlessly.
 I was even able to notice when the [resume] hook was triggered after I woke the machine up from hibernate.
 
