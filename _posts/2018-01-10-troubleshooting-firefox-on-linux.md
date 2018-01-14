@@ -16,6 +16,8 @@ After about 10 seconds of research, I found Sway. It's i3, but for Wayland. Perf
 #### FireFox on Linux
 So far I have only one major issue. FireFox 57. Something is wrong with XWayland support. Or something is wrong with Sway, because it works fine in GNOME and I'm pretty sure that uses XWayland. I'm still trying to figure it out. I have a handful of coredumps and very little expertise to troubleshoot them. Oh well, time to roll up my sleeves and learn some GDB. Will post when I have updates.
 
+##### Saving our Core Dump
+SystemD comes with a tool - `coredumpctl` - for managing recent process dumps
 ```sh
  ~  coredumpctl list
 TIME                            PID   UID   GID SIG COREFILE  EXE
@@ -26,3 +28,10 @@ Fri 2018-01-05 17:50:24 MST    1368  1000  1000  11 missing   /usr/lib/firefox/f
 Wed 2018-01-10 19:26:30 MST    1276  1000  1000   3 present   /usr/lib/firefox/firefox
 Wed 2018-01-10 19:26:30 MST    1274  1000  1000   3 present   /usr/lib/firefox/firefox
 ```
+We can write these out to a file by selecting the PID of the coredump and using the output flag OR use `coredumpctl` directly
+```sh
+$ coredumpctl dump 1274 -o ./firefox.dump && gdb ./firefox.dump
+$ coredumpctl gdb 1274
+```
+
+##### Examination
