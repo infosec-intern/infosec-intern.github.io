@@ -19,7 +19,7 @@ So far I have only one major issue. FireFox 57. Something is wrong with XWayland
 ##### Saving our Core Dump
 SystemD comes with a tool - `coredumpctl` - for managing recent process dumps
 ```sh
- ~  coredumpctl list
+$ coredumpctl list
 TIME                            PID   UID   GID SIG COREFILE  EXE
 Fri 2018-01-05 17:50:21 MST    6546  1000  1000  11 missing   /usr/lib/firefox/firefox
 Fri 2018-01-05 17:50:24 MST    6452  1000  1000  11 missing   /usr/lib/firefox/firefox
@@ -30,8 +30,8 @@ Wed 2018-01-10 19:26:30 MST    1274  1000  1000   3 present   /usr/lib/firefox/f
 ```
 We can write these out to a file by selecting the PID of the coredump and using the output flag OR use `coredumpctl` directly
 ```sh
- ~  coredumpctl dump 1274 -o ./firefox.dump && gdb ./firefox.dump
- ~  coredumpctl gdb 1274
+$ coredumpctl dump 1274 -o ./firefox.dump && gdb ./firefox.dump
+$ coredumpctl gdb 1274
 ```
 
 ##### Examination
