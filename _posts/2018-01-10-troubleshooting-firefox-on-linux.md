@@ -35,3 +35,40 @@ $ coredumpctl gdb 1274
 ```
 
 ##### Examination
+Like all browsers, FireFox is a multi-threaded application. When we load the core dump, we run the `bt` command, which is just an alias for `backtrace`, to get information about the stack frames in each thread. Then we can start forming a picture from there.
+
+After looking at the traces, my process looked a little like the following when it died:
+```
+* Thread-1: 1274 (main thread)
+    * Thread-2: 1277 (pthread_cond_wait)
+    * Thread-3: 1278 (pthread_cond_wait)
+    * Thread-4: 1279 (pthread_cond_wait)
+    * Thread-5: 1280 (pthread_cond_wait)
+    * Thread-6: 1281 (pthread_cond_wait)
+    * Thread-7: 1282 (pthread_cond_wait)
+    * Thread-8: 1283 (pthread_cond_wait)
+```
+Threads 2 through 8 had the same stack trace ending in `pthread_cond_wait` from the `libpthread.so.0` shared library. From the man page for this function (`man 3 pthread_cond_wait`) we can see that this function blocks threads based on some condition set by a caller thread. Since Thread-1 is the only thread that isn't blocked, we can assume that's the caller.
+
+Thread-1's stacktrace is a lot more complicated than 2-8, so that's where I'll spend my time. The full trace is below:
+```sh
+Thread 1 (Thread 0x7efe4b10d740 (LWP 1274)):
+#0  0x00007efe4ad01c50 in raise () at /usr/lib/libpthread.so.0
+#1  0x00007efe3e99493b in  () at /usr/lib/firefox/libxul.so
+#2  0x00007efe4ad01db0 in <signal handler called> () at /usr/lib/libpthread.so.0
+#3  0x00007efe4acfd766 in pthread_cond_timedwait@@GLIBC_2.3.2 () at /usr/lib/libpthread.so.0
+#4  0x00007efe4b0d09b7 in  () at /usr/lib/firefox/libnspr4.so
+#5  0x00007efe4b0d0e8a in PR_WaitCondVar () at /usr/lib/firefox/libnspr4.so
+#6  0x00007efe4b0d29ad in PR_Sleep () at /usr/lib/firefox/libnspr4.so
+#7  0x00007efe3e99f27a in  () at /usr/lib/firefox/libxul.so
+#8  0x00007efe3e9a101b in  () at /usr/lib/firefox/libxul.so
+#9  0x00007efe3e9a13f2 in  () at /usr/lib/firefox/libxul.so
+#10 0x00005625ba16423d in  ()
+#11 0x00005625ba1638ad in  ()
+#12 0x00007efe4a1b0f4a in __libc_start_main () at /usr/lib/libc.so.6
+#13 0x00005625ba163bca in _start ()
+```
+We can see the first line, which is the most recent function call in a trace, is for the `raise` function. From its man page (`man 3 raise`), we see that it exists to send signals from a callee thread to a caller thread. In its own words: 
+> in a single-threaded program, it is equivalent to kill(getpid(), sig);
+
+The stacktraces I most typically see are in Python, so this function call tells me some sort of unhandled exception was thrown, and FireFox didn't know how to handle it properly, so it exited with an error.
