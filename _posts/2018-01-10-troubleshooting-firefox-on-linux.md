@@ -30,8 +30,8 @@ Wed 2018-01-10 19:26:30 MST    1274  1000  1000   3 present   /usr/lib/firefox/f
 ```
 We can write these out to a file by selecting the PID of the coredump and using the output flag OR use `coredumpctl` directly
 ```sh
-$ coredumpctl dump 1274 -o ./firefox.dump && gdb ./firefox.dump
-$ coredumpctl gdb 1274
+ ~  coredumpctl dump 1274 -o ./firefox.dump && gdb ./firefox.dump
+ ~  coredumpctl gdb 1274
 ```
 
 ##### Examination
@@ -50,8 +50,14 @@ After looking at the traces, my process looked a little like the following when 
 ```
 Threads 2 through 8 had the same stack trace ending in `pthread_cond_wait` from the `libpthread.so.0` shared library. From the man page for this function (`man 3 pthread_cond_wait`) we can see that this function blocks threads based on some condition set by a caller thread. Since Thread-1 is the only thread that isn't blocked, we can assume that's the caller.
 
+Let's switch to Thread-1:
+```sh
+(gdb) thread 1
+```
+
 Thread-1's stacktrace is a lot more complicated than 2-8, so that's where I'll spend my time. The full trace is below:
 ```sh
+(gdb) bt
 Thread 1 (Thread 0x7efe4b10d740 (LWP 1274)):
 #0  0x00007efe4ad01c50 in raise () at /usr/lib/libpthread.so.0
 #1  0x00007efe3e99493b in  () at /usr/lib/firefox/libxul.so
