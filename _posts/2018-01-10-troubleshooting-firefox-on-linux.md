@@ -77,4 +77,4 @@ Thread 1 (Thread 0x7efe4b10d740 (LWP 1274)):
 We can see the first line, which is the most recent function call in a trace, is for the `raise` function. From its man page (`man 3 raise`), we see that it exists to send signals from a callee thread to a caller thread. In its own words: 
 > in a single-threaded program, it is equivalent to kill(getpid(), sig);
 
-The stacktraces I most typically see are in Python, so this function call tells me some sort of unhandled exception was thrown, and FireFox didn't know how to handle it properly, so it exited with an error.
+The stacktraces I most typically see are in Python, which throws an Exception object when some unknown is encountered in a program. It looks like something very similar is happening here, so this function call tells me an unhandled exception was thrown, and FireFox didn't know how to handle it properly, so it exited with an error.
